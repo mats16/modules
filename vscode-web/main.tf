@@ -163,10 +163,4 @@ resource "coder_app" "vscode-web" {
   subdomain    = true
   share        = var.share
   order        = var.order
-
-  healthcheck {
-    url       = "http://localhost:${var.port}/healthz"
-    interval  = 5
-    threshold = 6
-  }
 }
